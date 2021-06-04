@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+               function getRandomIntInclusive(min, max) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min +1)) + min;
+                }
+                 
+            
+
+                 function level1(lev)
+                 {
+                   
+                var bonValue1 = getRandomIntInclusive(1, 100); 
+                alert(bonValue1);
+                alert("Valeur comprise entre [1  -  100]");   
+               for (let i = 0; i < 5; i++) {
+                   var valSaisi=parseInt(prompt("Valeur [1 - 100]")) ;
+                   if(valSaisi==bonValue1){
+                    var indextrouver=i+1;
+                        var trouver=true;
+                       break;
+                   }else if(valSaisi< bonValue1 ){
+                     alert( valSaisi+" est petit");
+                   }else{
+                       alert(valSaisi+" est grand");
+                   }
+                   var tentative_rest=5-(i+1);
+                   alert("il vous reste "+tentative_rest+" tentative");
+               }
+           
+               if(trouver==true){
+                alert(" FELICITATION : Level "+lev+" valide  :"+indextrouver+"eme tentative");
+                //on test si on n a pas le dernier level
+                    
+                    do{
+                        var reponse=prompt('Voulez vous passer au level suivant (oui/non)');
+                        if(!(reponse =="oui") || (reponse =="non") )
+                        {
+                            alert("(oui/non)");   
+                        }
+                    }while(!(reponse=="oui" || reponse=="non"))
+                    if(reponse =="oui"){
+                        level2(parseInt(lev+1));
+                    }else{
+                        alert('Merci au revoir !');
+                    }
+                   
+
+            }else{
+                alert(" tu as echoué le level ");
+               }
+            }          
+
+            ///////// level 2
+ 
+            
+            function level2(lev)
+                 {
+                   
+                var bonValue = getRandomIntInclusive(101, 500); 
+                alert(bonValue);
+                alert("Valeur comprise entre [101  -  500]");   
+               for (let i = 0; i < 5; i++) {
+                   var valSaisi=parseInt(prompt("Valeur [ 101 - 500]")) ;
+                   if(valSaisi==bonValue){
+                    var indextrouver=i+1;
+                        var trouver=true;
+                       break;
+                   }else if(valSaisi< bonValue ){
+                     alert( valSaisi+" est petit");
+                   }else{
+                       alert(valSaisi+" est grand");
+                   }
+                   var tentative_rest=5-(i+1);
+                   alert("il vous reste "+tentative_rest+" tentative");
+                   
+               }
+           
+               if(trouver==true){
+                alert(" FELICITATION : Level "+lev+" valide  :"+indextrouver+"eme tentative");
+                //on test si on n a pas le dernier level
+                   if(lev<3){
+                    do{
+                        var reponse=prompt('Voulez vous passer au level suivant (oui/non)');
+                        if(!(reponse =="oui") || (reponse =="non") )
+                        {
+                            alert("(oui/non)");   
+                        }
+                    }while(!(reponse=="oui" || reponse=="non"))
+                    if(reponse=="oui"){
+                        level3(parseInt(lev+1));
+                    }else{
+                        alert('Merci au revoir !');
+                    }
+                   } 
+
+            }else{
+                alert(nom+" tu as echoué");
+               }
+            }  
+
+            //////   fin level 2
+
+           ///// level 3
+
+          
+           function level3(lev)
+                 {
+                   
+                var bonValue = getRandomIntInclusive(501, 1000); 
+                alert(bonValue);
+                alert("Valeur comprise entre [501  -  1000]");   
+               for (let i = 0; i < 5; i++) {
+                   var valSaisi=parseInt(prompt("Valeur - [501 - 1000] ")) ;
+                   if(valSaisi==bonValue){
+                    var indextrouver=i+1;
+                        var trouver=true;
+                       break;
+                   }else if(valSaisi< bonValue ){
+                     alert( valSaisi+" est petit");
+                   }else{
+                       alert(valSaisi+" est grand");
+                   }
+                   var tentative_rest=5-(i+1);
+                   alert("il vous reste "+tentative_rest+" tentative");
+                   
+               }
+           
+               if(trouver==true){
+                alert(" FELICITATION : Level "+lev+" valide  :"+indextrouver+"eme tentative");
+                //on test si on n a pas le dernier level
+                   if(lev<3){
+                    do{
+                        var reponse=prompt('Voulez vous passer au level suivant (oui/non)');
+                        if(!(reponse =="oui") || (reponse =="non") )
+                        {
+                            alert("(oui/non)");   
+                        }
+                    }while(!(reponse=="oui" || reponse=="non"))
+                    if(reponse=="oui"){
+                       level1(parseInt(lev+1));
+                    }else{
+                        alert('Merci au revoir !');
+                    }
+                   } 
+
+            }else{
+                alert(nom+" tu as echoué");
+               }
+            }  
+           ///// fin level 3
+             
+
+
+            level1(1);
+               
+
+
+                //  alert(v);
+                // do{
+                //     var reponse=prompt('voulez vous commencer le text (true/false)');
+                // }while(!(reponse=="true" || reponse=="false"))
+
+                // while(reponse=="true"){
+                    
+                 
+                //     do{
+                //     var reponse=prompt('voulez vous commencer le text (true/false)');
+                // }while(!(reponse=="true" || reponse=="false"))
+                
+                // }
+    </script>
+</body>
+</html>
